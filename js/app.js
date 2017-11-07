@@ -21,13 +21,13 @@ function decipher(phrase) { // Creamos la funcion decipher para decifrar el mens
   var decipherString = '';
   for (var i=0; i < newPhrase.length; i++) {
     if (newPhrase.charCodeAt([i]) >= 65 && newPhrase.charCodeAt([i]) <= 90 && phrase.charCodeAt([i]) !== 32) {
-       decipherString += String.fromCharCode((newPhrase.charCodeAt([i]) - 65) - 33 % 26 + 65);
-      }
-    else if (newPhrase.charCodeAt([i]) >= 97 && newPhrase.charCodeAt([i]) <= 122 && phrase.charCodeAt([i]) !== 32) {
-    decipherString += String.fromCharCode((newPhrase.charCodeAt([i]) - 97) - 33 % 26 + 97);
-     }
+      decipherString += String.fromCharCode((newPhrase.charCodeAt([i]) - 65) - 33 % 26 + 65);
     }
-return decipherString;
+    else if (newPhrase.charCodeAt([i]) >= 97 && newPhrase.charCodeAt([i]) <= 122 && phrase.charCodeAt([i]) !== 32) {
+      decipherString += String.fromCharCode((newPhrase.charCodeAt([i]) - 97) - 33 % 26 + 97);
+    }
+}
+  return decipherString;
 }
 console.log(phrase);
 console.log (cipher(phrase));
